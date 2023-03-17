@@ -1,0 +1,93 @@
+.freya-logo img{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 25px;
+}
+
+
+/* second section */
+
+.categories-hp-1.section-box {
+    padding-bottom: 111px
+}
+
+.categories-hp-1 .categories-content .lighting {
+    padding-top: 41px;
+    margin-right: 10px
+}
+
+.categories-hp-1 .categories-content .furniture {
+    margin: 0 5px
+}
+
+.categories-hp-1 .categories-content .decoration {
+    padding-top: 41px;
+    margin-left: 10px
+}
+
+.categories-hp-1 .categories-content .categories-detail {
+    position: relative
+}
+
+.categories-hp-1 .categories-content .categories-detail .images {
+    overflow: hidden
+}
+
+.categories-hp-1 .categories-content .categories-detail .images img {
+    transition: transform .6s cubic-bezier(.25, .46, .45, .94);
+    -moz-transition: transform .6s cubic-bezier(.25, .46, .45, .94);
+    -webkit-transition: transform .6s cubic-bezier(.25, .46, .45, .94);
+    -o-transition: transform .6s cubic-bezier(.25, .46, .45, .94);
+    -ms-transition: transform .6s cubic-bezier(.25, .46, .45, .94)
+   }
+   .categories-hp-1 .categories-content .categories-detail .images img{
+    max-width: 100%;
+   }
+
+.categories-hp-1 .categories-content .categories-detail .product {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    background: #fff
+}
+
+.categories-hp-1 .categories-content .categories-detail .product a {
+    padding: 7.5px 20px
+}
+
+.categories-hp-1 .categories-content .categories-detail .product a:hover {
+    color: #333
+}
+
+.categories-hp-1 .categories-content .categories-detail .product .name {
+    font-size: 18px;
+    font-weight: 500
+}
+
+.categories-hp-1 .categories-content .categories-detail .product .quantity {
+    display: none;
+    color: #666
+}
+
+.categories-hp-1 .categories-content .categories-detail .product:hover .line {
+    display: none
+}
+
+.categories-hp-1 .categories-content .categories-detail .product:hover .quantity {
+    display: inline-block
+}
+
+.categories-hp-1 .categories-content .categories-detail:hover .images img {
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1)
+}
+
+
+/* marbles */
+
+.col-lg-6.mb-4 img {
+    height: 600px;
+}
