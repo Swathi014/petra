@@ -253,3 +253,11 @@
         justify-content: center
     }
 }
+
+
+.back{
+    background-image: url(https://img.freepik.com/premium-vector/white-marble-texture-background-skin-tile-wallpaper_322958-900.jpg?w=1480);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
