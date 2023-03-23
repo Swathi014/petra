@@ -130,7 +130,7 @@ section.bg-white.text-center.back {
     border-bottom: 3px solid #b71c1c
 }
 
-.container .product-item {
+.container-fluid .product-item {
     min-height: 450px;
     border: none;
     overflow: hidden;
@@ -138,7 +138,7 @@ section.bg-white.text-center.back {
     border-radius: 0
 }
 
-.container .product-item .product {
+.container-fluid .product-item .product {
     width: 100%;
     height: 350px;
     position: relative;
@@ -146,13 +146,13 @@ section.bg-white.text-center.back {
     cursor: pointer
 }
 
-.container .product-item .product img {
+.container-fluid .product-item .product img {
     width: 100%;
     height: 100%;
     object-fit: cover
 }
 
-.container .product-item .product .icons .icon {
+.container-fluid .product-item .product .icons .icon {
     width: 40px;
     height: 40px;
     background-color: #fff;
@@ -165,28 +165,28 @@ section.bg-white.text-center.back {
     cursor: pointer
 }
 
-.container .product-item .product .icons .icon:hover {
+.container-fluid .product-item .product .icons .icon:hover {
     background-color: #b71c1c;
     color: #fff
 }
 
-.container .product-item .product .icons .icon:nth-last-of-type(3) {
+.container-fluid .product-item .product .icons .icon:nth-last-of-type(3) {
     transition-delay: 0.2s
 }
 
-.container .product-item .product .icons .icon:nth-last-of-type(2) {
+.container-fluid .product-item .product .icons .icon:nth-last-of-type(2) {
     transition-delay: 0.15s
 }
 
-.container .product-item .product .icons .icon:nth-last-of-type(1) {
+.container-fluid .product-item .product .icons .icon:nth-last-of-type(1) {
     transition-delay: 0.1s
 }
 
-.container .product-item:hover .product .icons .icon {
+.container-fluid .product-item:hover .product .icons .icon {
     transform: translateY(-60px)
 }
 
-.container .product-item .tag {
+.container-fluid .product-item .tag {
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 500;
@@ -196,17 +196,17 @@ section.bg-white.text-center.back {
     padding: 0 0.4rem
 }
 
-.container .product-item .title {
+.container-fluid .product-item .title {
     font-size: 0.95rem;
     letter-spacing: 0.5px
 }
 
-.container .product-item .fa-star {
+.container-fluid .product-item .fa-star {
     font-size: 0.65rem;
     color: goldenrod
 }
 
-.container .product-item .price {
+.container-fluid .product-item .price {
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 600
@@ -418,3 +418,72 @@ section.back.contact{
     display: flex;
     margin-left: 4px;
   }
+
+
+
+
+
+
+
+
+
+  /* image gallery -projects */
+
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-fluid .box .col {
+    display: flex;
+    flex-direction: column;
+    width: 32.6%;
+}
+
+.container-fluid .box .col img {
+    margin: 7px 0;
+    border: 6.5px solid #fff;
+    transition: .6s;
+}
+
+.container-fluid .box .col img:hover {
+    opacity: .8;
+    border-radius: 2rem;
+    transform: scale(1.03);
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.full-img img {
+    width: 50%;
+}
+
+.full-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 3px 9px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.full-img span:hover {
+    background: #fff;
+    color: #000;
+}
