@@ -1,11 +1,32 @@
+/*--------------------------------------------------------------
+# Logo Resize
+--------------------------------------------------------------*/
 .freya-logo img{
     background-size: contain;
     background-repeat: no-repeat;
     height: 50px;
 }
 
+/*--------------------------------------------------------------
+# Body background
+--------------------------------------------------------------*/
+.back{
+    background-image: url(https://img.freepik.com/premium-vector/white-marble-texture-background-skin-tile-wallpaper_322958-900.jpg?w=1480);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.back1{
+    background-image: url(https://img.freepik.com/premium-vector/white-marble-texture-background-skin-tile-wallpaper_322958-900.jpg?w=1480);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
 
-/* service section */
+/*--------------------------------------------------------------
+# product listing
+--------------------------------------------------------------*/
+
 .col-md-6.col-lg-12 img {
     width: 25%;
 }
@@ -14,9 +35,11 @@
     width: 100%;
     height: 300px;
 }
-/* second section */
 
-.categories-hp-1.section-box {
+/*--------------------------------------------------------------
+#  SEcond product listing 
+--------------------------------------------------------------*/
+/* .categories-hp-1.section-box {
     padding-bottom: 111px
 }
 
@@ -97,17 +120,21 @@
 section.bg-white.text-center.back {
     padding-top: 0px !important;
 }
+ */
 
 
-/* marbles */
-
+/*--------------------------------------------------------------
+# marbles 
+--------------------------------------------------------------*/
 .col-lg-6.mb-4 img {
     height: 400px;
 }
 
 
-/* marbles single page */
 
+/*--------------------------------------------------------------
+# marbles single page
+--------------------------------------------------------------*/
 
 .navbar-nav .nav-link {
     color: #000 !important;
@@ -249,21 +276,11 @@ section.bg-white.text-center.back {
 }
 
 
-.back{
-    background-image: url(https://img.freepik.com/premium-vector/white-marble-texture-background-skin-tile-wallpaper_322958-900.jpg?w=1480);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
-.back1{
-    background-image: url(https://img.freepik.com/premium-vector/white-marble-texture-background-skin-tile-wallpaper_322958-900.jpg?w=1480);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
 
-
-
+/*--------------------------------------------------------------
+# service section
+--------------------------------------------------------------*/
+/* 
 
   .portfolio {
     display: flex;
@@ -329,7 +346,7 @@ section.bg-white.text-center.back {
     text-align: center;
     color: #fff;
     font-size: 16px;
-  }
+  } */
 /*   
   .card .content span:last-child {
     font-size: 14px;
@@ -338,7 +355,7 @@ section.bg-white.text-center.back {
     font-weight: 700;
   }
    */
-  
+/*   
   @media screen and (max-width: 768px) {
     .card {
     width: 50%;
@@ -358,15 +375,21 @@ section.bg-white.text-center.back {
     .card {
     width: 100%;
     }
-  }
+  } */
 
+
+/*--------------------------------------------------------------
+# navbar dropdown icon
+--------------------------------------------------------------*/
 
   .dropdown .dropdown-indicator:after{
     right: -0.537rem !important;
   }
 
-  /* client slider */
-
+  
+/*--------------------------------------------------------------
+# client slider 
+--------------------------------------------------------------*/
  
   @keyframes scroll {
     0% {
@@ -392,8 +415,10 @@ section.bg-white.text-center.back {
     height: 100px;
     width: 250px;
   }
+/*--------------------------------------------------------------
+# contact form
+--------------------------------------------------------------*/
 
-  /* contact form */
 .contact{
     padding-top: 0px !important;
 }
@@ -401,9 +426,10 @@ section.back.contact{
     padding-bottom: 0px !important;
 }
 
-  
-  /* FOOTER STYLES
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  /*--------------------------------------------------------------
+# FOOTER STYLES
+--------------------------------------------------------------*/
+
   .page-footer {
     position: fixed;
     right: 0;
@@ -425,10 +451,9 @@ section.back.contact{
 
 
 
-
-
-  /* image gallery -projects */
-
+/*--------------------------------------------------------------
+# image gallery -projects
+--------------------------------------------------------------*/
 
 .box {
     width: 100%;
