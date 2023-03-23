@@ -94,6 +94,10 @@
     -ms-transform: scale(1.1)
 }
 
+section.bg-white.text-center.back {
+    padding-top: 0px !important;
+}
+
 
 /* marbles */
 
@@ -251,6 +255,12 @@
     background-repeat: no-repeat;
     
 }
+.back1{
+    background-image: url(https://img.freepik.com/premium-vector/white-marble-texture-background-skin-tile-wallpaper_322958-900.jpg?w=1480);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
 
 
 
@@ -353,4 +363,53 @@
 
   .dropdown .dropdown-indicator:after{
     right: -0.537rem !important;
+  }
+
+  /* client slider */
+
+ 
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  .slider {
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+  }
+  .slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .slider .slide {
+    height: 100px;
+    width: 250px;
+  }
+
+  /* contact form */
+
+
+  
+  /* FOOTER STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .page-footer {
+    position: fixed;
+    right: 0;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    z-index: 1;
+  }
+  
+  .page-footer a {
+    display: flex;
+    margin-left: 4px;
   }
