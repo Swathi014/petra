@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Logo Resize
 --------------------------------------------------------------*/
-.freya-logo img{
+.freya-logo img {
     background-size: contain;
     background-repeat: no-repeat;
     height: 50px;
@@ -10,17 +10,16 @@
 /*--------------------------------------------------------------
 # Body background
 --------------------------------------------------------------*/
-.back{
+.back {
     background-image: url(https://img.freepik.com/premium-vector/white-marble-texture-background-skin-tile-wallpaper_322958-900.jpg?w=1480);
     background-size: cover;
     background-repeat: no-repeat;
-    
 }
-.back1{
+.back1 {
     background-image: url(https://img.freepik.com/premium-vector/white-marble-texture-background-skin-tile-wallpaper_322958-900.jpg?w=1480);
     background-size: cover;
     background-repeat: no-repeat;
-    
+    padding-top: 0px;
 }
 
 /*--------------------------------------------------------------
@@ -122,15 +121,12 @@ section.bg-white.text-center.back {
 }
  */
 
-
 /*--------------------------------------------------------------
 # marbles 
 --------------------------------------------------------------*/
 .col-lg-6.mb-4 img {
     height: 400px;
 }
-
-
 
 /*--------------------------------------------------------------
 # marbles single page
@@ -141,20 +137,20 @@ section.bg-white.text-center.back {
     padding: 0.5rem 0rem !important;
     border-color: transparent;
     margin-left: 1.5rem;
-    transition: none
+    transition: none;
 }
 
 .navbar .navbar-toggler:focus {
-    box-shadow: none
+    box-shadow: none;
 }
 
 .navbar-nav .nav-link.active,
 .border-red {
-    border-bottom: 3px solid #b71c1c
+    border-bottom: 3px solid #b71c1c;
 }
 
 .navbar-nav .nav-link:hover {
-    border-bottom: 3px solid #b71c1c
+    border-bottom: 3px solid #b71c1c;
 }
 
 .container .product-item {
@@ -162,7 +158,7 @@ section.bg-white.text-center.back {
     border: none;
     overflow: hidden;
     position: relative;
-    border-radius: 0
+    border-radius: 0;
 }
 
 .container .product-item .product {
@@ -170,13 +166,13 @@ section.bg-white.text-center.back {
     height: 350px;
     position: relative;
     overflow: hidden;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .container .product-item .product img {
     width: 100%;
     height: 100%;
-    object-fit: cover
+    object-fit: cover;
 }
 
 .container .product-item .product .icons .icon {
@@ -189,28 +185,28 @@ section.bg-white.text-center.back {
     align-items: center;
     transition: transform 0.6s ease;
     transform: rotate(180deg);
-    cursor: pointer
+    cursor: pointer;
 }
 
 .container .product-item .product .icons .icon:hover {
     background-color: #b71c1c;
-    color: #fff
+    color: #fff;
 }
 
 .container .product-item .product .icons .icon:nth-last-of-type(3) {
-    transition-delay: 0.2s
+    transition-delay: 0.2s;
 }
 
 .container .product-item .product .icons .icon:nth-last-of-type(2) {
-    transition-delay: 0.15s
+    transition-delay: 0.15s;
 }
 
 .container .product-item .product .icons .icon:nth-last-of-type(1) {
-    transition-delay: 0.1s
+    transition-delay: 0.1s;
 }
 
 .container .product-item:hover .product .icons .icon {
-    transform: translateY(-60px)
+    transform: translateY(-60px);
 }
 
 .container .product-item .tag {
@@ -220,50 +216,49 @@ section.bg-white.text-center.back {
     position: absolute;
     top: 10px;
     left: 20px;
-    padding: 0 0.4rem
+    padding: 0 0.4rem;
 }
 
 .container .product-item .title {
     font-size: 0.95rem;
-    letter-spacing: 0.5px
+    letter-spacing: 0.5px;
 }
 
 .container .product-item .fa-star {
     font-size: 0.65rem;
-    color: goldenrod
+    color: goldenrod;
 }
 
 .container .product-item .price {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-weight: 600
+    font-weight: 600;
 }
 
 .fw-800 {
-    font-weight: 800
+    font-weight: 800;
 }
 
 .bg-green {
     background-color: #208f20 !important;
-    color: #fff
+    color: #fff;
 }
 
 .bg-black {
     background-color: #1f1d1d;
-    color: #fff
+    color: #fff;
 }
 
 .bg-red {
     background-color: #bb3535;
-    color: #fff
+    color: #fff;
 }
 
 @media (max-width: 767.5px) {
-
     .navbar-nav .nav-link.active,
     .navbar-nav .nav-link:hover {
         background-color: #b71c1c;
-        color: #fff !important
+        color: #fff !important;
     }
 
     .navbar-nav .nav-link {
@@ -271,11 +266,9 @@ section.bg-white.text-center.back {
         margin: 0.8rem 0;
         display: flex;
         border-radius: 10px;
-        justify-content: center
+        justify-content: center;
     }
 }
-
-
 
 /*--------------------------------------------------------------
 # service section
@@ -377,60 +370,109 @@ section.bg-white.text-center.back {
     }
   } */
 
-
 /*--------------------------------------------------------------
 # navbar dropdown icon
 --------------------------------------------------------------*/
 
-  .dropdown .dropdown-indicator:after{
+.dropdown .dropdown-indicator:after {
     right: -0.537rem !important;
-  }
+}
 
-  
+/*--------------------------------------------------------------
+# new products
+--------------------------------------------------------------*/
+.card {
+    border: none;
+    border-radius: 0;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+.carousel-inner {
+    padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-control-prev span,
+.carousel-control-next span {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+@media screen and (min-width: 577px) {
+    .cards-wrapper {
+        display: flex;
+    }
+    .card {
+        margin: 0 0.5em;
+        width: calc(100% / 2);
+    }
+    .image-wrapper {
+        height: 12vw;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 576px) {
+    .card:not(:first-child) {
+        display: none;
+    }
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*--------------------------------------------------------------
+# contact form
+--------------------------------------------------------------*/
+
+.contact {
+    padding-top: 0px !important;
+}
+section.back.contact {
+    padding-bottom: 0px !important;
+}
+
 /*--------------------------------------------------------------
 # client slider 
 --------------------------------------------------------------*/
- 
-  @keyframes scroll {
+
+@keyframes scroll {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
     }
-  }
-  .slider {
+}
+.slider {
     height: 100px;
     margin: auto;
     overflow: hidden;
     position: relative;
     width: auto;
-  }
-  .slider .slide-track {
+}
+.slider .slide-track {
     animation: scroll 40s linear infinite;
     display: flex;
     width: calc(250px * 14);
-  }
-  .slider .slide {
+}
+.slider .slide {
     height: 100px;
     width: 250px;
-  }
+}
 /*--------------------------------------------------------------
-# contact form
---------------------------------------------------------------*/
-
-.contact{
-    padding-top: 0px !important;
-}
-section.back.contact{
-    padding-bottom: 0px !important;
-}
-
-  /*--------------------------------------------------------------
 # FOOTER STYLES
 --------------------------------------------------------------*/
 
-  .page-footer {
+.page-footer {
     position: fixed;
     right: 0;
     bottom: 50px;
@@ -438,18 +480,12 @@ section.back.contact{
     align-items: center;
     padding: 5px;
     z-index: 1;
-  }
-  
-  .page-footer a {
+}
+
+.page-footer a {
     display: flex;
     margin-left: 4px;
-  }
-
-
-
-
-
-
+}
 
 /*--------------------------------------------------------------
 # image gallery -projects
@@ -471,11 +507,11 @@ section.back.contact{
 .container-fluid .box .col img {
     margin: 7px 0;
     border: 6.5px solid #fff;
-    transition: .6s;
+    transition: 0.6s;
 }
 
 .container-fluid .box .col img:hover {
-    opacity: .8;
+    opacity: 0.8;
     /* border-radius: 2rem; */
     transform: scale(1.03);
 }
@@ -513,6 +549,6 @@ section.back.contact{
     color: #000;
 }
 
-.gallery{
+.gallery {
     padding-top: 10px;
 }

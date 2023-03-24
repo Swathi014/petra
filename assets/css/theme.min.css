@@ -5645,7 +5645,7 @@ fieldset:disabled .btn {
     background-color: var(--freya-card-bg);
     background-clip: border-box;
     border: 0 solid var(--freya-card-border-color);
-    border-radius: 1.375rem
+    /* border-radius: 1.375rem */
 }
 
 .card>hr {
