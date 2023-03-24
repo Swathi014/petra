@@ -412,13 +412,19 @@ section.bg-white.text-center.back {
         width: calc(100% / 2);
     }
     .image-wrapper {
-        height: 12vw;
+        height: 14vw;
         margin: 0 auto;
     }
+   
 }
 @media screen and (max-width: 576px) {
     .card:not(:first-child) {
         display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    h5.card-title {
+        margin-top: 10px;
     }
 }
 
