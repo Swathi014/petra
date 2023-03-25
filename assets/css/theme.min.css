@@ -302,7 +302,8 @@ h1,
 .h1 {
     margin-top: 0;
     margin-bottom: .5rem;
-    font-family: "Futura PT", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* font-family: "Futura PT", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+    font-family: ui-serif;
     font-weight: 500;
     line-height: 1.2;
     color: var(--freya-headings-color)

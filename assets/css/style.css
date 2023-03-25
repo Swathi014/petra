@@ -568,7 +568,7 @@ section.back.contact {
 .features-one {
     position: relative;
     display: block;
-    background: #ffffff;
+    /* background: #ffffff; */
     padding: 0px 0px 90px;
   }
   
