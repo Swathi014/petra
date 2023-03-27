@@ -5,7 +5,7 @@ function ownKeys(object, enumerableOnly) {
     if (Object.getOwnPropertySymbols) {
         var symbols = Object.getOwnPropertySymbols(object);
         if (enumerableOnly) {
-            symbols = symbols.filter(function(sym) {
+            symbols = symbols.filter(function (sym) {
                 return Object.getOwnPropertyDescriptor(object, sym).enumerable;
             });
         }
@@ -18,13 +18,13 @@ function _objectSpread(target) {
     for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i] != null ? arguments[i] : {};
         if (i % 2) {
-            ownKeys(Object(source), true).forEach(function(key) {
+            ownKeys(Object(source), true).forEach(function (key) {
                 _defineProperty(target, key, source[key]);
             });
         } else if (Object.getOwnPropertyDescriptors) {
             Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
         } else {
-            ownKeys(Object(source)).forEach(function(key) {
+            ownKeys(Object(source)).forEach(function (key) {
                 Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
             });
         }
@@ -95,7 +95,7 @@ var isIterableArray = function isIterableArray(array) {
 };
 
 var camelize = function camelize(str) {
-    var text = str.replace(/[-_\s.]+(.)?/g, function(_, c) {
+    var text = str.replace(/[-_\s.]+(.)?/g, function (_, c) {
         return c ? c.toUpperCase() : '';
     });
     return "".concat(text.substr(0, 1).toLowerCase()).concat(text.substr(1));
@@ -116,7 +116,7 @@ var hexToRgb = function hexToRgb(hexValue) {
     hexValue.indexOf('#') === 0 ? hex = hexValue.substring(1) : hex = hexValue; // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
 
     var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex.replace(shorthandRegex, function(m, r, g, b) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex.replace(shorthandRegex, function (m, r, g, b) {
         return r + r + g + g + b + b;
     }));
     return result ? [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)] : null;
@@ -234,7 +234,7 @@ var getBreakpoint = function getBreakpoint(el) {
     var breakpoint;
 
     if (classes) {
-        breakpoint = breakpoints[classes.split(' ').filter(function(cls) {
+        breakpoint = breakpoints[classes.split(' ').filter(function (cls) {
             return cls.includes('navbar-expand-');
         }).pop().split('-').pop()];
     }
@@ -320,7 +320,7 @@ var getDates = function getDates(startDate, endDate) {
     var steps = duration / interval;
     return Array.from({
         length: steps + 1
-    }, function(v, i) {
+    }, function (v, i) {
         return new Date(startDate.valueOf() + interval * i);
     });
 };
@@ -418,7 +418,7 @@ var detectorInit = function detectorInit() {
 -----------------------------------------------*/
 
 
-var DomNode = /*#__PURE__*/ function() {
+var DomNode = /*#__PURE__*/ function () {
     function DomNode(node) {
         _classCallCheck(this, DomNode);
 
@@ -492,7 +492,7 @@ var DomNode = /*#__PURE__*/ function() {
     }, {
         key: "camelize",
         value: function camelize(str) {
-            var text = str.replace(/[-_\s.]+(.)?/g, function(_, c) {
+            var text = str.replace(/[-_\s.]+(.)?/g, function (_, c) {
                 return c ? c.toUpperCase() : '';
             });
             return "".concat(text.substr(0, 1).toLowerCase()).concat(text.substr(1));
@@ -526,8 +526,8 @@ var bgPlayerInit = function bgPlayerInit() {
 
     var loadVideo = function loadVideo() {
         function setupPlayer() {
-            window.YT.ready(function() {
-                youtubeEmbedElements.forEach(function(youtubeEmbedElement) {
+            window.YT.ready(function () {
+                youtubeEmbedElements.forEach(function (youtubeEmbedElement) {
                     var userOptions = utils.getData(youtubeEmbedElement, DATA_KEY.YOUTUBE_EMBED);
                     var defaultOptions = {
                         videoId: 'hLpy-DRuiz0',
@@ -560,7 +560,7 @@ var bgPlayerInit = function bgPlayerInit() {
                                 },
                                 onStateChange: function onStateChange(e) {
                                     if (e.data === window.YT.PlayerState.PLAYING) {
-                                        document.querySelectorAll(Selector.DATA_YOUTUBE_EMBED).forEach(function(embedElement) {
+                                        document.querySelectorAll(Selector.DATA_YOUTUBE_EMBED).forEach(function (embedElement) {
                                             embedElement.classList.add(ClassName.LOADED);
                                         });
                                     }
@@ -593,7 +593,7 @@ var bgPlayerInit = function bgPlayerInit() {
     if (document.readyState !== Events.LOADING) {
         loadVideo();
     } else {
-        document.addEventListener(Events.DOM_CONTENT_LOADED, function() {
+        document.addEventListener(Events.DOM_CONTENT_LOADED, function () {
             return loadVideo();
         });
     }
@@ -604,7 +604,7 @@ var bgPlayerInit = function bgPlayerInit() {
 
     var adjustBackgroundRatio = function adjustBackgroundRatio() {
         var ytElements = document.querySelectorAll(Selector.YT_VIDEO);
-        ytElements.forEach(function(ytEl) {
+        ytElements.forEach(function (ytEl) {
             var ytElement = ytEl;
             var width = ytElement.parentElement.offsetWidth + 200;
             var height = width * 9 / 16;
@@ -618,7 +618,7 @@ var bgPlayerInit = function bgPlayerInit() {
     };
 
     adjustBackgroundRatio();
-    document.addEventListener(Events.SCROLL, function() {
+    document.addEventListener(Events.SCROLL, function () {
         return adjustBackgroundRatio();
     });
 };
@@ -638,15 +638,15 @@ var dropdownMenuInit = function dropdownMenuInit() {
             TABLE_RESPONSIVE: '.table-responsive',
             DROPDOWN_MENU: '.dropdown-menu'
         };
-        document.querySelectorAll(Selector.TABLE_RESPONSIVE).forEach(function(table) {
-            table.addEventListener(Event.SHOWN_BS_DROPDOWN, function(e) {
+        document.querySelectorAll(Selector.TABLE_RESPONSIVE).forEach(function (table) {
+            table.addEventListener(Event.SHOWN_BS_DROPDOWN, function (e) {
                 var t = e.currentTarget;
 
                 if (t.scrollWidth > t.clientWidth) {
                     t.style.paddingBottom = "".concat(e.target.nextElementSibling.clientHeight, "px");
                 }
             });
-            table.addEventListener(Event.HIDDEN_BS_DROPDOWN, function(e) {
+            table.addEventListener(Event.HIDDEN_BS_DROPDOWN, function (e) {
                 e.currentTarget.style.paddingBottom = '';
             });
         });
@@ -667,8 +667,8 @@ var dropdownOnHover = function dropdownOnHover() {
     var breakPoint = utils.getBreakpoint(navbar);
 
     if (navbarArea) {
-        navbarArea.forEach(function(navbarItem) {
-            navbarItem.addEventListener('mouseover', function(e) {
+        navbarArea.forEach(function (navbarItem) {
+            navbarItem.addEventListener('mouseover', function (e) {
                 var dropdownInstance = new window.bootstrap.Dropdown(e.target, {
                     autoClose: 'outside'
                 });
@@ -681,7 +681,7 @@ var dropdownOnHover = function dropdownOnHover() {
 
                     dropdownInstance._menu.setAttribute('data-bs-popper', 'none');
 
-                    e.target.parentNode.addEventListener('mouseleave', function() {
+                    e.target.parentNode.addEventListener('mouseleave', function () {
                         dropdownInstance.hide();
                     });
                 }
@@ -1608,7 +1608,7 @@ function initMap() {
                 }]
             }]
         };
-        $googlemaps.forEach(function(itm) {
+        $googlemaps.forEach(function (itm) {
             var latLng = utils.getData(itm, 'latlng').split(',');
             var markerPopup = itm.innerHTML;
             var icon = utils.getData(itm, 'icon') ? utils.getData(itm, 'icon') : 'https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi.png';
@@ -1646,10 +1646,10 @@ function initMap() {
                 icon: icon,
                 map: map
             });
-            marker.addListener('click', function() {
+            marker.addListener('click', function () {
                 infowindow.open(map, marker);
             });
-            themeController && themeController.addEventListener('clickControl', function(_ref) {
+            themeController && themeController.addEventListener('clickControl', function (_ref) {
                 var _ref$detail = _ref.detail,
                     control = _ref$detail.control,
                     value = _ref$detail.value;
@@ -1676,13 +1676,13 @@ var hamburgerInit = function hamburgerInit() {
     var navbarCollapse = document.querySelector(Selector.NAVBAR_COLLAPSE);
 
     if (hamburger) {
-        navbarCollapse.addEventListener('show.bs.collapse', function() {
+        navbarCollapse.addEventListener('show.bs.collapse', function () {
             hamburger.classList.add('is-active');
         });
     }
 
     if (hamburger) {
-        navbarCollapse.addEventListener('hide.bs.collapse', function() {
+        navbarCollapse.addEventListener('hide.bs.collapse', function () {
             hamburger.classList.remove('is-active');
         });
     }
@@ -1700,7 +1700,7 @@ function inertiaInit() {
         RESIZE: 'resize'
     };
     var inertiaEls = document.querySelectorAll(Selector.DATA_INERTIA);
-    inertiaEls.forEach(function(el) {
+    inertiaEls.forEach(function (el) {
         var rect = el.getBoundingClientRect();
         var options = utils.getData(el, DATA_KEY.INERTIA);
         var offsetTop = rect.top >= 0 ? rect.top : 0;
@@ -1743,7 +1743,7 @@ function inertiaInit() {
 var lightboxInit = function lightboxInit() {
     if (window.BigPicture) {
         var bpItems = document.querySelectorAll('[data-bigpicture]');
-        bpItems.forEach(function(bpItem) {
+        bpItems.forEach(function (bpItem) {
             var userOptions = utils.getData(bpItem, 'bigpicture');
             var defaultOptions = {
                 el: bpItem
@@ -1751,7 +1751,7 @@ var lightboxInit = function lightboxInit() {
 
             var options = window._.merge(defaultOptions, userOptions);
 
-            bpItem.addEventListener('click', function() {
+            bpItem.addEventListener('click', function () {
                 window.BigPicture(options);
             });
         });
@@ -1766,7 +1766,7 @@ var lightboxInit = function lightboxInit() {
 
 var popoverInit = function popoverInit() {
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    popoverTriggerList.map(function(popoverTriggerEl) {
+    popoverTriggerList.map(function (popoverTriggerEl) {
         return new window.bootstrap.Popover(popoverTriggerEl);
     });
 };
@@ -1779,10 +1779,10 @@ var popoverInit = function popoverInit() {
 
 var preloaderInit = function preloaderInit() {
     var bodyElement = document.querySelector('body');
-    window.imagesLoaded(bodyElement, function() {
+    window.imagesLoaded(bodyElement, function () {
         var preloader = document.querySelector('.preloader');
         preloader === null || preloader === void 0 ? void 0 : preloader.classList.add('loaded');
-        setTimeout(function() {
+        setTimeout(function () {
             preloader === null || preloader === void 0 ? void 0 : preloader.remove();
         }, 900);
     });
@@ -1803,8 +1803,8 @@ var rellaxInit = function rellaxInit() {
 
 
 var scrollToTop = function scrollToTop() {
-    document.querySelectorAll('[data-anchor] > a, [data-scroll-to]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
+    document.querySelectorAll('[data-anchor] > a, [data-scroll-to]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
             var _utils$getData;
 
             e.preventDefault();
@@ -1827,7 +1827,7 @@ var scrollToTop = function scrollToTop() {
 
 
 var scrollbarInit = function scrollbarInit() {
-    Array.prototype.forEach.call(document.querySelectorAll('.scrollbar-overlay'), function(el) {
+    Array.prototype.forEach.call(document.querySelectorAll('.scrollbar-overlay'), function (el) {
         return new window.OverlayScrollbars(el, {
             scrollbars: {
                 autoHide: 'leave',
@@ -1859,7 +1859,7 @@ var swiperInit = function swiperInit() {
     var swipers = document.querySelectorAll(Selector.DATA_SWIPER);
 
     if (swipers.length) {
-        swipers.forEach(function(swiper) {
+        swipers.forEach(function (swiper) {
             var options = utils.getData(swiper, DATA_KEY.SWIPER);
             var thumbsOptions = options.thumb;
             var thumbsInit;
@@ -1867,7 +1867,7 @@ var swiperInit = function swiperInit() {
             if (thumbsOptions) {
                 var thumbImages = swiper.querySelectorAll(Selector.IMG);
                 var slides = '';
-                thumbImages.forEach(function(img) {
+                thumbImages.forEach(function (img) {
                     slides += "\n          <div class='swiper-slide '>\n            <img class='img-fluid rounded mt-1' src=".concat(img.src, " alt=''/>\n          </div>\n        ");
                 });
                 var thumbs = document.createElement('div');
@@ -1896,9 +1896,9 @@ var swiperInit = function swiperInit() {
                 on: {
                     init: function init() {
                         var timelineElements = swiper.querySelectorAll(Selector.DATA_ZANIM_TIMELINE);
-                        timelineElements.forEach(function(el) {
-                            window.zanimation(el, function(animation) {
-                                setTimeout(function() {
+                        timelineElements.forEach(function (el) {
+                            window.zanimation(el, function (animation) {
+                                setTimeout(function () {
                                     animation.play();
                                 }, 400);
                             });
@@ -1908,11 +1908,11 @@ var swiperInit = function swiperInit() {
             })); //- zanimation effect start
 
             if (swiper) {
-                newSwiper.on(Events.SLIDE_CHANGE, function() {
+                newSwiper.on(Events.SLIDE_CHANGE, function () {
                     var timelineElements = swiper.querySelectorAll(Selector.DATA_ZANIM_TIMELINE);
-                    timelineElements.forEach(function(el) {
-                        window.zanimation(el, function(animation) {
-                            setTimeout(function() {
+                    timelineElements.forEach(function (el) {
+                        window.zanimation(el, function (animation) {
+                            setTimeout(function () {
                                 animation.play();
                             }, 400);
                         });
@@ -1932,14 +1932,14 @@ var swiperInit = function swiperInit() {
 
 var toastInit = function toastInit() {
     var toastElList = [].slice.call(document.querySelectorAll('.toast'));
-    toastElList.map(function(toastEl) {
+    toastElList.map(function (toastEl) {
         return new window.bootstrap.Toast(toastEl);
     });
     var liveToastBtn = document.getElementById('liveToastBtn');
 
     if (liveToastBtn) {
         var liveToast = new window.bootstrap.Toast(document.getElementById('liveToast'));
-        liveToastBtn.addEventListener('click', function() {
+        liveToastBtn.addEventListener('click', function () {
             liveToast && liveToast.show();
         });
     }
@@ -1953,7 +1953,7 @@ var toastInit = function toastInit() {
 
 var tooltipInit = function tooltipInit() {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(function(tooltipTriggerEl) {
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new window.bootstrap.Tooltip(tooltipTriggerEl, {
             trigger: 'hover'
         });
@@ -2117,7 +2117,7 @@ var zanimationEffects = {
 };
 
 if (utils.isRTL()) {
-    Object.keys(zanimationEffects).forEach(function(key) {
+    Object.keys(zanimationEffects).forEach(function (key) {
         if (zanimationEffects[key].from.x) {
             zanimationEffects[key].from.x = -zanimationEffects[key].from.x;
         }
@@ -2152,7 +2152,7 @@ var zanimation = function zanimation(el, callback) {
                -----------------------------------------------*/
             var animationBreakpoints = [];
             var attributes = element.getAttributeNames();
-            attributes.forEach(function(attribute) {
+            attributes.forEach(function (attribute) {
                 if (attribute !== DATA_KEY.DATA_ZANIM_TRIGGER && attribute.startsWith('data-zanim-')) {
                     var breakPointName = attribute.split('data-zanim-')[1];
 
@@ -2167,7 +2167,7 @@ var zanimation = function zanimation(el, callback) {
             controllerZanim = undefined;
 
             if (animationBreakpoints.length !== 0) {
-                animationBreakpoints = animationBreakpoints.sort(function(a, b) {
+                animationBreakpoints = animationBreakpoints.sort(function (a, b) {
                     return a.size - b.size;
                 });
                 var activeBreakpoint = animationBreakpoints.pop();
@@ -2228,7 +2228,7 @@ var zanimation = function zanimation(el, callback) {
         var timelineOption = utils.getData(el, 'zanim-timeline');
         var timeline = gsap.timeline(timelineOption);
         var timelineElements = el.querySelectorAll(Selector.DATA_KEYS);
-        timelineElements.forEach(function(timelineEl) {
+        timelineElements.forEach(function (timelineEl) {
             var controller = getController(timelineEl);
             timeline.fromTo(timelineEl, controller.duration, controller.from, controller.to, controller.delay).pause();
             window.imagesLoaded(timelineEl, callback(timeline));
@@ -2265,9 +2265,9 @@ var zanimationInit = function zanimationInit() {
 
     var triggerZanimation = function triggerZanimation() {
         var triggerElement = document.querySelectorAll(Selector.DATA_ZANIM_TRIGGER);
-        triggerElement.forEach(function(el) {
+        triggerElement.forEach(function (el) {
             if (utils.isElementIntoView(el) && el.hasAttribute(DATA_KEY.DATA_ZANIM_TRIGGER)) {
-                zanimation(el, function(animation) {
+                zanimation(el, function (animation) {
                     return animation.play();
                 });
 
@@ -2279,7 +2279,7 @@ var zanimationInit = function zanimationInit() {
     };
 
     triggerZanimation();
-    window.addEventListener(Events.SCROLL, function() {
+    window.addEventListener(Events.SCROLL, function () {
         return triggerZanimation();
     });
 };
@@ -2312,46 +2312,47 @@ docReady(inertiaInit);
 docReady(preloaderInit);
 docReady(rellaxInit);
 
+/* -------------------------------------------------------------------------- */
 
-// about section
+/*                          About New SEction                                 */
 
-
+/* -------------------------------------------------------------------------- */
 function animate(obj, initVal, lastVal, duration) {
-         let startTime = null;
+    let startTime = null;
 
-      //Get The Current Timestamp And Assign It To The currentTime Variable.
-      let currentTime = Date.now();
+    //Get The Current Timestamp And Assign It To The currentTime Variable.
+    let currentTime = Date.now();
 
-      //Pass The Current Timestamp To The Step Function.
-      const step = (currentTime ) => {
+    //Pass The Current Timestamp To The Step Function.
+    const step = (currentTime) => {
 
-      //If The Start Time Is Null, Assign The Current Time To startTime.
-      if (!startTime) {
-         startTime = currentTime ;
-      }
+        //If The Start Time Is Null, Assign The Current Time To startTime.
+        if (!startTime) {
+            startTime = currentTime;
+        }
 
-      //Calculate The Value To Be Used In Calculating The Number To Be Displayed.
-      const progress = Math.min((currentTime - startTime)/ duration, 1);
+        //Calculate The Value To Be Used In Calculating The Number To Be Displayed.
+        const progress = Math.min((currentTime - startTime) / duration, 1);
 
-      //Calculate What To Be Displayed Using The Value From Above.
-      obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+        //Calculate What To Be Displayed Using The Value From Above.
+        obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
 
-      //Checking To Make Sure The Counter Does NOT Exceed The Last Value (lastVal).
-      if (progress < 1) {
-         window.requestAnimationFrame(step);
-      } else {
+        //Checking To Make Sure The Counter Does NOT Exceed The Last Value (lastVal).
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        } else {
             window.cancelAnimationFrame(window.requestAnimationFrame(step));
-         }
-      };
-      //Start Animating
-         window.requestAnimationFrame(step);
-      }
-      let text1 = document.getElementById('stats-1');
-      let text2 = document.getElementById('stats-2');
-      let text3 = document.getElementById('stats-3');
-      const load = () => {
-         animate(text1, 0, 50, 7000);
-         animate(text2, 0, 10, 7000);
-         animate(text3, 0, 20, 7000);
-         //animate(text3, 100, 25, 7000);
-      }
+        }
+    };
+    //Start Animating
+    window.requestAnimationFrame(step);
+}
+let text1 = document.getElementById('stats-1');
+let text2 = document.getElementById('stats-2');
+let text3 = document.getElementById('stats-3');
+const load = () => {
+    animate(text1, 0, 50, 7000);
+    animate(text2, 0, 10, 7000);
+    animate(text3, 0, 20, 7000);
+    //animate(text3, 100, 25, 7000);
+}
