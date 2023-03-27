@@ -2312,3 +2312,46 @@ docReady(inertiaInit);
 docReady(preloaderInit);
 docReady(rellaxInit);
 
+
+// about section
+
+
+function animate(obj, initVal, lastVal, duration) {
+         let startTime = null;
+
+      //Get The Current Timestamp And Assign It To The currentTime Variable.
+      let currentTime = Date.now();
+
+      //Pass The Current Timestamp To The Step Function.
+      const step = (currentTime ) => {
+
+      //If The Start Time Is Null, Assign The Current Time To startTime.
+      if (!startTime) {
+         startTime = currentTime ;
+      }
+
+      //Calculate The Value To Be Used In Calculating The Number To Be Displayed.
+      const progress = Math.min((currentTime - startTime)/ duration, 1);
+
+      //Calculate What To Be Displayed Using The Value From Above.
+      obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+      //Checking To Make Sure The Counter Does NOT Exceed The Last Value (lastVal).
+      if (progress < 1) {
+         window.requestAnimationFrame(step);
+      } else {
+            window.cancelAnimationFrame(window.requestAnimationFrame(step));
+         }
+      };
+      //Start Animating
+         window.requestAnimationFrame(step);
+      }
+      let text1 = document.getElementById('stats-1');
+      let text2 = document.getElementById('stats-2');
+      let text3 = document.getElementById('stats-3');
+      const load = () => {
+         animate(text1, 0, 50, 7000);
+         animate(text2, 0, 15, 7000);
+         animate(text3, 0, 35, 7000);
+         //animate(text3, 100, 25, 7000);
+      }
