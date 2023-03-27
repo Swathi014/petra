@@ -978,7 +978,11 @@ padding: 3px 7px;
 border-radius: 30px;
 } */
 
-
+/***
+=============================================
+  About New
+=============================================
+***/
   /* Create Three Equal Columns That Float Next To Each Other. */
   .stats-column {
     float: left;
@@ -999,7 +1003,7 @@ border-radius: 30px;
   .stats-box {
     width: 300px;
     height: 200px;
-    background: #000000da;
+    background-image: url(https://img.freepik.com/free-photo/black-marble-texture_125540-840.jpg?w=1380&t=st=1679910944~exp=1679911544~hmac=c659b89bd173d62ed4eef152bb4c55b1c45c22a61cf0178c5fb59c5950b8b65b);
     color: #FFF;
     border-radius: 25px;
     font-family: sans-serif;
@@ -1043,7 +1047,13 @@ svg.svg-inline--fa.fa-microphone-alt.fa-w-11 {
 svg.svg-inline--fa.fa-hourglass.fa-w-12 {
     font-size: 20px;
 }
-  
+ .plus{
+    margin-left: 116px;
+    margin-top: -70px;
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+ } 
 @media screen and (max-width: 768px) {
     .stats-box {
         width: 230px;
@@ -1068,4 +1078,11 @@ svg.svg-inline--fa.fa-hourglass.fa-w-12 {
         font-family: 'Dancing Script', cursive;
         font-size: 50px;
       }
-    }
+      .plus{
+        margin-left: 100px;
+    margin-top: -60px;
+    font-size: 50px;
+    font-weight: 900;
+}
+      }
+    
