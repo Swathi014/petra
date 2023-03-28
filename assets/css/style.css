@@ -1082,4 +1082,54 @@ svg.svg-inline--fa.fa-hourglass.fa-w-12 {
         font-size: 50px;
         font-weight: 900;
     }
+
+    .carousel-control-prev {
+        left: 0px !important;
+    }
+    
+    .carousel-control-next {
+        right: 0px !important;
+    }
+
+    .carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 0px !important;
+    bottom: 0px;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0px;
+    color: #fff;
+    text-align: center;
+    background: none;
+    border: 0;
+    opacity: .5;
+    -webkit-transition: opacity .15s ease;
+    -o-transition: opacity .15s ease;
+    transition: opacity .15s ease;
+}
+
+.navbar-freya {
+    background: var(--freya-bg-navbar-glass);
+    margin: 1.25rem auto !important;
+    color: #161820;
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+    letter-spacing: .01rem;
+    border-radius: 0rem !important;
+}
+
+.row.min-vh-100.justify-content-start.align-items-end.pt-11.pb-6.text-white {
+    background-color: #000000a8;
+}
+    
 }

@@ -6847,8 +6847,8 @@ fieldset:disabled .btn {
 .carousel-control-prev,
 .carousel-control-next {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 235px;
+    bottom: 0px;
     z-index: 1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6860,7 +6860,7 @@ fieldset:disabled .btn {
     -ms-flex-pack: center;
     justify-content: center;
     width: 15%;
-    padding: 0;
+    padding: 0px;
     color: #fff;
     text-align: center;
     background: none;
@@ -6868,7 +6868,7 @@ fieldset:disabled .btn {
     opacity: .5;
     -webkit-transition: opacity .15s ease;
     -o-transition: opacity .15s ease;
-    transition: opacity .15s ease
+    transition: opacity .15s ease;
 }
 
 @media(prefers-reduced-motion: reduce) {
@@ -6891,11 +6891,11 @@ fieldset:disabled .btn {
 }
 
 .carousel-control-prev {
-    left: 0
+    left: -120px;
 }
 
 .carousel-control-next {
-    right: 0
+    right: -120px;
 }
 
 .carousel-control-prev-icon,
