@@ -2353,6 +2353,6 @@ let text3 = document.getElementById('stats-3');
 const load = () => {
     animate(text1, 0, 50, 7000);
     animate(text2, 0, 10, 7000);
-    animate(text3, 0, 20, 7000);
+    animate(text3, 0, 80, 7000);
     //animate(text3, 100, 25, 7000);
 }
