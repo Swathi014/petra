@@ -1138,3 +1138,19 @@ svg.svg-inline--fa.fa-hourglass.fa-w-12 {
 }
     
 }
+
+
+
+/* Hover effect */
+.zoom-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .zoom-effect img {
+    transition: transform 0.5s;
+  }
+  
+  .zoom-effect:hover img {
+    transform: scale(1.2);
+  }
